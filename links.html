@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SR Studio Salon | Enlaces</title>
+  
+  <!-- SEO -->
+  <meta name="description" content="Todos los enlaces de SR Studio Salon - Instagram, Facebook, WhatsApp y más">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="SR Studio Salon - Enlaces">
+  <meta property="og:description" content="Encuentra todos nuestros enlaces en un solo lugar">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Header/Profile Section */
+    .profile {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, #D4AF37 0%, #F5E6B8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 600;
+      color: #000;
+      border: 4px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
+    }
+
+    .profile-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .profile-bio {
+      color: #D4AF37;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-location {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    /* Mini Gallery */
+    .mini-gallery {
+      margin: 2rem 0;
+      animation: fadeIn 0.8s ease-out 0.2s backwards;
+    }
+
+    .gallery-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #D4AF37;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Links Section */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .link-item {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: #ffffff;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      animation: slideUp 0.5s ease-out backwards;
+    }
+
+    .link-item:nth-child(1) { animation-delay: 0.1s; }
+    .link-item:nth-child(2) { animation-delay: 0.15s; }
+    .link-item:nth-child(3) { animation-delay: 0.2s; }
+    .link-item:nth-child(4) { animation-delay: 0.25s; }
+    .link-item:nth-child(5) { animation-delay: 0.3s; }
+    .link-item:nth-child(6) { animation-delay: 0.35s; }
+    .link-item:nth-child(7) { animation-delay: 0.4s; }
+
+    .link-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .link-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(212, 175, 55, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+    }
+
+    .link-item:hover::before {
+      opacity: 1;
+    }
+
+    .link-item:active {
+      transform: translateY(-2px);
+    }
+
+    .link-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .link-icon.whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #20BA5A 100%);
+    }
+
+    .link-icon.instagram {
+      background: linear-gradient(135deg, #E4405F 0%, #C13584 50%, #833AB4 100%);
+    }
+
+    .link-icon.facebook {
+      background: linear-gradient(135deg, #1877F2 0%, #0D5DBE 100%);
+    }
+
+    .link-icon.phone {
+      background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+    }
+
+    .link-icon.location {
+      background: linear-gradient(135deg, #EA4335 0%, #C5221F 100%);
+    }
+
+    .link-icon.website {
+      background: linear-gradient(135deg, #000000 0%, #2C2C2C 100%);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .link-icon.calendar {
+      background: linear-gradient(135deg, #4285F4 0%, #3367D6 100%);
+    }
+
+    .link-content {
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .link-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .link-subtitle {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .link-arrow {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 1.25rem;
+      transition: transform 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .link-item:hover .link-arrow {
+      transform: translateX(4px);
+      color: #D4AF37;
+    }
+
+    /* Featured CTA */
+    .featured-cta {
+      background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+      border: none;
+      box-shadow: 0 8px 32px rgba(212, 175, 55, 0.4);
+    }
+
+    .featured-cta .link-icon {
+      background: rgba(0, 0, 0, 0.2);
+      color: #ffffff;
+    }
+
+    .featured-cta .link-title {
+      color: #000000;
+    }
+
+    .featured-cta .link-subtitle {
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    .featured-cta .link-arrow {
+      color: #000000;
+    }
+
+    .featured-cta:hover {
+      background: linear-gradient(135deg, #E5C048 0%, #D4AF37 100%);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(212, 175, 55, 0.5);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      animation: fadeIn 1s ease-out 0.6s backwards;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #D4AF37;
+    }
+
+    .footer-text {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-text a {
+      color: #D4AF37;
+      text-decoration: none;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+
+      .profile-name {
+        font-size: 1.75rem;
+      }
+
+      .link-item {
+        padding: 1rem 1.25rem;
+      }
+
+      .link-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+      }
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    
+    <!-- Profile Section -->
+    <div class="profile">
+      <div class="profile-image">SR</div>
+      <h1 class="profile-name">SR Studio Salon</h1>
+      <p class="profile-bio">Estilismo de Alta Calidad</p>
+      <p class="profile-location">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg>
+        Xalapa, Veracruz
+      </p>
+    </div>
+
+    <!-- Mini Gallery -->
+    <div class="mini-gallery">
+      <div class="gallery-title">Nuestros Trabajos</div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&auto=format&fit=crop" alt="Trabajo 1" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&auto=format&fit=crop" alt="Trabajo 2" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400&auto=format&fit=crop" alt="Trabajo 3" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&auto=format&fit=crop" alt="Trabajo 4" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- Links Section -->
+    <div class="links">
+      
+      <!-- Featured CTA - Agendar Cita -->
+      <a href="https://wa.me/52228XXXXXXX?text=Hola,%20me%20gustaría%20agendar%20una%20cita" 
+         class="link-item featured-cta" 
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="link-icon whatsapp">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">Agenda tu Cita</div>
+          <div class="link-subtitle">Respuesta inmediata por WhatsApp</div>
+        </div>
+        <div class="link-arrow">→</div>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/srstudiosalon" 
+         class="link-item" 
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="link-icon instagram">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">Instagram</div>
+          <div class="link-subtitle">@srstudiosalon</div>
+        </div>
+        <div class="link-arrow">→</div>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/srstudiosalon" 
+         class="link-item" 
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="link-icon facebook">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">Facebook</div>
+          <div class="link-subtitle">Síguenos en Facebook</div>
+        </div>
+        <div class="link-arrow">→</div>
+      </a>
+
+      <!-- Llamar -->
+      <a href="tel:+52228XXXXXXX" class="link-item">
+        <div class="link-icon phone">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">Llamar Ahora</div>
+          <div class="link-subtitle">228-XXX-XXXX</div>
+        </div>
+        <div class="link-arrow">→</div>
+      </a>
+
+      <!-- Ubicación -->
+      <a href="https://goo.gl/maps/UBICACION_AQUI" 
+         class="link-item" 
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="link-icon location">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">Cómo Llegar</div>
+          <div class="link-subtitle">Ver en Google Maps</div>
+        </div>
+        <div class="link-arrow">→</div>
+      </a>
+
+      <!-- Sitio Web Completo -->
+      <a href="index.html" class="link-item">
+        <div class="link-icon website">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">Ver Sitio Completo</div>
+          <div class="link-subtitle">Portfolio, servicios y más</div>
+        </div>
+        <div class="link-arrow">→</div>
+      </a>
+
+      <!-- Horarios (opcional) -->
+      <a href="#horarios" class="link-item" onclick="event.preventDefault(); alert('Lunes a Viernes: 10:00 - 19:00\\nSábados: 10:00 - 18:00\\nDomingos: Cerrado');">
+        <div class="link-icon calendar">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/>
+          </svg>
+        </div>
+        <div class="link-content">
+          <div class="link-title">Horarios</div>
+          <div class="link-subtitle">Lunes a Sábado</div>
+        </div>
+        <div class="link-arrow">→</div>
+      </a>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-logo">SR STUDIO</div>
+      <p class="footer-text">
+        Desarrollado por <a href="https://visiblemx.com" target="_blank">VisibleMX</a>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Simple Analytics -->
+  <script>
+    // Track link clicks
+    document.querySelectorAll('.link-item').forEach(link => {
+      link.addEventListener('click', function() {
+        const title = this.querySelector('.link-title').textContent;
+        console.log('Link clicked:', title);
+        
+        // Google Analytics tracking (si está configurado)
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'link_click', {
+            'link_name': title
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
